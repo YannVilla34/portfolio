@@ -1,0 +1,279 @@
+/* style.css */
+
+/* Import police */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ========== Base globale ========== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #212529;
+}
+
+.fonddark {
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+p, li {
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  color: #212529;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+/* ========== Background des sections ========== */
+.light-bg {
+  background-color: #fff;
+  color: #212529;
+}
+
+.dark-bg {
+  background-color: #142A2E;
+  color: #ffffff;
+}
+
+/* ========== Début ========== */
+.hero {
+  padding: 3rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.hero .subtitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.full-screen-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+  align-items: center;     /* Centre horizontalement */
+  text-align: center;
+  background-color: #fff;  /* ou autre couleur/image si tu veux */
+  padding: 1rem;
+}
+
+ /* BOUTON */
+
+  .scroll-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #142A2E;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem; /* petit texte */
+    margin: 2rem auto;
+    cursor: pointer;
+    line-height: 1.2;
+  }
+
+  .scroll-link:hover {
+    color: #0a58ca;
+  }
+
+
+/* ========== Texte animé (typed text) ========== */
+#typed-text {
+  border-right: 2px solid #0A58CA;
+  color: #0A58CA;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  line-height: 1.4;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* ========== Ma situation ========== */
+.ma-situation .container {
+  max-width: 900px;
+}
+
+/* ========== Qui suis-je et parcours ========== */
+.qui-suis-je .container {
+  max-width: 900px;
+}
+
+.section-text {
+  margin-bottom: 2rem;
+}
+
+/* ========== Expériences (Ils m'ont fait confiance) ========== */
+.experience {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.experience img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.experience > div {
+  flex: 1;
+}
+
+.experience h3 {
+  margin-top: 0;
+}
+
+/* ========== Portfolio ========== */
+.portfolio .container {
+  max-width: 900px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Logos logiciels ========== */
+.logos .container {
+  max-width: 900px;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.logo-item {
+  text-align: center;
+  width: 100px;
+  position: relative;
+  cursor: default;
+}
+
+.logo-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: brightness(95%);
+}
+
+.logo-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+.logo-caption {
+  font-size: 14px;
+  color: #142a2e;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 24px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.logo-item:hover .logo-caption {
+  opacity: 1;
+}
+
+/* ========== Séparateurs SVG ========== */
+.separator {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.separator svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* ========== Utilitaires ========== */
+.text-center {
+  text-align: center;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .logo-grid {
+    gap: 20px;
+  }
+
+  .logo-item {
+    width: 80px;
+  }
+
+  .logo-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .experience {
+    flex-direction: column;
+  }
+
+  .experience img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,11 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Yann Villa</title>
+
+  <!-- Police Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1Petit Portfolio chill
+
+  <!-- SECTION 1 : HERO (blanc) -->
+  <section class="hero light-bg">
+    <h1 style="text-align: center;">Yann Villa</h1>
+    <p class="subtitle" style="text-align: center;">Étudiant en master Information-Communication</p>
+
+    <!-- Texte animé -->
+    <div class="text-center mt-5" style="font-family: 'Poppins', sans-serif;">
+  <h2 class="fw-bold" style="font-size: clamp(1.5rem, 5vw, 2.8rem); line-height: 1.4;">
+    <span style="display: inline;">Je suis </span><br class="d-sm-none">
+    <span id="typed-text" style="border-right: 2px solid #0A58CA; color: #0A58CA; font-weight: bold;"></span>
+  </h2>
+</div>
+
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const texts = [
+      "chargé de communication",
+      "rédacteur",
+      "chargé de communication interne",
+      "chargé de projet événementiel",
+      "chargé des relations presse",
+      "chargé de projet en communication numérique",
+      "community manager"
+    ];
+
+    const typingSpeed = 80;
+    const erasingSpeed = 50;
+    const delayBetweenTexts = 1200;
+
+    let textIndex = 0;
+    let charIndex = 0;
+    const typedTextElement = document.getElementById("typed-text");
+
+    function type() {
+      if (!typedTextElement) return;
+      if (charIndex < texts[textIndex].length) {
+        typedTextElement.textContent = texts[textIndex].substring(0, charIndex + 1);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(erase, delayBetweenTexts);
+      }
+    }
+
+    function erase() {
+      if (!typedTextElement) return;
+      if (charIndex > 0) {
+        typedTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingSpeed);
+      } else {
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    setTimeout(type, 1000);
+  });
+</script>
+
+    <!-- Bouton "En savoir plus" -->
+<a href="#ma-situation" id="scrollLink" class="scroll-link">
+  <span>En savoir plus</span>
+  <span>v</span>
+</a>
+  
+  </section>
+
+  <!-- Séparateur entre HERO (blanc) et MA SITUATION -->
+  <div class="separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+
+  <!-- SECTION 1bis : MA SITUATION -->
+  <section id="ma-situation" class="ma-situation light-bg">
+    <div class="container">
+      <h2>Ma situation</h2>
+      <p>Admis en première année de Master Information-Communication à Montpellier et à Aix-En-Provence, je recherche une alternance dès la rentrée universitaire 2025.</p>
+      <p>Actuellement accepté à Montpellier en master Information-Communication spécialisation Communication Numérique des Organisations, ainsi qu’à Aix-En-Provence dans le master Information-Communication spécialisation Stratégies de communication et relations presse, je recherche une entreprise basée dans une de ces deux villes.</p>
+    </div>
+  </section>
+
+  <!-- Séparateur entre MA SITUATION et QUI SUIS-JE / PARCOURS -->
+  <div class="separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+      <path d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z" fill="#142A2E"></path>
+    </svg>
+  </div>
+
+  <!-- SECTION 2 : QUI SUIS-JE ET PARCOURS SCOLAIRE (fond sombre) -->
+  <section class="qui-suis-je parcours dark-bg">
+    <div class="container">
+      <h2>Qui suis-je ?</h2>
+      <div class="section-text">
+        <p>Je m'appelle Yann, j'ai 21 ans et je me suis découvert une passion débordante pour les métiers de la communication lors de mon adolescence. Je suis un amoureux de la communication numérique et du social media management, mais aussi un amateur d'événementiel. Dans mes expériences associatives, je passe mon temps à réaliser toute la communication stratégique et graphique autour des événements produits.</p>
+      </div>
+
+      <h2>Mon parcours scolaire</h2>
+      <div class="section-text">
+        <p>Après l’obtention de mon Baccalauréat général options HGGSP, HLP et SES, j’ai choisi de me tourner vers le domaine qui m’attirait depuis des années, celui de la Communication, et ce dans l’Université de ma ville de naissance : Montpellier.</p>
+        <p>Ce choix était j’estime le bon puisqu’il m’a permis d’acquérir des compétences diverses dans la communication 360°, me permettant d’être à l’aise dans la création de visuels, tout comme dans la mise en place de stratégies de diffusions efficaces et en étant capable de m’occuper de la communication interne d’une entreprise. Mes deux stages dans une société dans l’événementiel à succès m’ont aussi permis d’acquérir un ensemble de compétences significatives dans ce domaine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Séparateur entre QUI SUIS-JE / PARCOURS et ILS M'ONT FAIT CONFIANCE -->
+  <div class="separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+
+  <!-- SECTION 3 : ILS M'ONT FAIT CONFIANCE (fond blanc) -->
+  <section class="ils-mont-fait-confiance light-bg">
+    <div class="container">
+      <h2>Ils m'ont fait confiance</h2>
+
+      <div class="experience">
+        <img src="img/Logo/exp1.png" alt="Vice-Président Communication" />
+        <div>
+          <h3>Vice-Président Communication</h3>
+          <ul>
+            <li>Communication print et numérique sur l’intégralité des événements</li>
+            <li>Organisation d’événements festifs étudiants</li>
+            <li>Organisation d’événements solidaires (distribution de petits-déjeuners, marché gratuit…)</li>
+            <li>Gestion d’équipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience">
+        <img src="img/Logo/exp2.png" alt="Chargé de Communication" />
+        <div>
+          <h3>Chargé de Communication</h3>
+          <ul>
+            <li>Organisation d'un événement "Le Grand Barathon" avec +60 000 clients par an à travers la France (Lyon, Montpellier, Toulouse, Grenoble, Lille…)</li>
+            <li>Stratégie globale des différents événements de l'entreprise</li>
+            <li>Rédaction pour les réseaux sociaux et campagne de mailing</li>
+            <li>Développement d’une stratégie de communication d’influence, de la recherche des profils à la coordination des campagnes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience">
+        <img src="img/Logo/exp3.png" alt="Rédacteur" />
+        <div>
+          <h3>Rédacteur</h3>
+          <ul>
+            <li>Rédaction d'articles et de brèves liés au Montpellier Hérault Sport Club</li>
+            <li>Transcription d'interviews</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Séparateur entre ILS M'ONT FAIT CONFIANCE et PORTFOLIO -->
+  <div class="separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+      <path d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z" fill="#142A2E"></path>
+    </svg>
+  </div>
+
+  <!-- SECTION 4 : PORTFOLIO (fond sombre) -->
+  <section class="portfolio dark-bg">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <img src="img/Exp/projet1.jpg" alt="Projet 1" />
+        <img src="img/Exp/projet2.jpg" alt="Projet 2" />
+        <img src="img/Exp/projet3.jpg" alt="Projet 3" />
+        <img src="img/Exp/projet4.jpg" alt="Projet 4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Séparateur entre PORTFOLIO et MES LOGICIELS -->
+  <div class="separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+
+  <!-- SECTION 5 : MES LOGICIELS (fond blanc) -->
+  <section class="logos light-bg">
+    <div class="container">
+      <div class="logo-grid">
+        <div class="logo-item">
+          <img src="img/logiciels/ps.png" alt="Photoshop" loading="lazy">
+          <div class="logo-caption">Photoshop</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Id.png" alt="InDesign" loading="lazy">
+          <div class="logo-caption">InDesign</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Ai.png" alt="Illustrator" loading="lazy">
+          <div class="logo-caption">Illustrator</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Mailchimp.png" alt="Mailchimp" loading="lazy">
+          <div class="logo-caption">Mailchimp</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Figma.png" alt="Figma" loading="lazy">
+          <div class="logo-caption">Figma</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Aff.png" alt="Suite Affinity" loading="lazy">
+          <div class="logo-caption">Suite Affinity</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Canva.png" alt="Canva" loading="lazy">
+          <div class="logo-caption">Canva</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Capcut.png" alt="CapCut" loading="lazy">
+          <div class="logo-caption">CapCut</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Office.png" alt="Suite Office" loading="lazy">
+          <div class="logo-caption">Suite Office</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Pr.png" alt="Premiere Pro" loading="lazy">
+          <div class="logo-caption">Premiere Pro</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Trello.png" alt="Trello" loading="lazy">
+          <div class="logo-caption">Trello</div>
+        </div>
+        <div class="logo-item">
+          <img src="img/logiciels/Wordp.png" alt="WordPress" loading="lazy">
+          <div class="logo-caption">WordPress</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Séparateur SVG -->
+  <div class="separator">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,0 C600,100 600,100 1200,0 L1200,100 L0,100 Z" fill="#142A2E" />
+    </svg>
+  </div>
+
+  <!-- SECTION 6 : footer (fond sombre) -->
+   <footer class="dark-bg">
+    <div class="container">
+      <p class="fonddark">© 2025 Yann Villa. Tous droits réservés.</p>
+      <p class="fonddark">Contact : contact@yann-villa.fr <a href="mailto:contact@yann-villa.fr"> </p>
+
+  <script>
+  document.getElementById('scrollLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('ma-situation').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>
+
