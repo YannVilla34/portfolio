@@ -53,6 +53,7 @@ ul {
   color: #212529;
 }
 
+
 .dark-bg {
   background-color: #142A2E;
   color: #ffffff;
@@ -63,6 +64,9 @@ ul {
   padding: 3rem 1rem;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  font-size: clamp(2.5rem, 8vw, 5rem); 
+  font-weight: 700;
+  margin: 0;
 }
 
 .hero .subtitle {
@@ -101,7 +105,7 @@ ul {
     text-decoration: none;
     color: #142A2E;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem; /* petit texte */
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
     margin: 2rem auto;
     cursor: pointer;
     line-height: 1.2;
@@ -130,6 +134,109 @@ ul {
   max-width: 900px;
 }
 
+#ma-situation {
+  padding-top: 2rem;  
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Permet que l'image dépasse */
+}
+
+.situation-wrapper {
+  position: relative;
+  width: 60vw;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible; /* Important pour laisser dépasser l'image */
+}
+
+/* Rectangle texte au premier plan */
+.situation-card {
+  background-color: #142A2E;
+  color: white;
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
+  max-width: 80%;
+  min-width: 500px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  /* Décalage léger pour permettre visibilité de l'image */
+  transform: translate(-5%, -5%);
+}
+
+/* Image en arrière-plan partiellement cachée sous le rectangle */
+.situation-bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;          /* taille proportionnelle à .situation-wrapper */
+  height: auto;        /* garde les proportions naturelles */
+  max-width: none;
+  object-fit: contain;
+  z-index: 5;          /* derrière le rectangle */
+  
+  /* Décalage pour que l’image dépasse derrière le rectangle */
+  transform: translate(30%, 30%);
+  
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none; /* évite les interactions dessus */
+  user-select: none;
+}
+
+/* Responsive : adapte taille et décalage selon largeur écran */
+@media (max-width: 900px) {
+  .situation-wrapper {
+    width: 80vw;
+  }
+  
+  .situation-card {
+    max-width: 70%;
+    padding: 2rem 3rem;
+    transform: translate(-3%, -3%);
+  }
+  
+  .situation-bg-img {
+    width: 90%;
+    transform: translate(25%, 25%);
+  }
+}
+
+@media (max-width: 600px) {
+  .situation-wrapper {
+    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .situation-card {
+    max-width: 100%;
+    padding: 1.5rem 2rem;
+    transform: translate(0, 0);
+    text-align: center;
+  }
+  
+  .situation-bg-img {
+    position: relative;
+    width: 100%;
+    transform: translate(0, 0);
+    margin-top: 1rem;
+    z-index: 1;
+  }
+}
+
 /* ========== Qui suis-je et parcours ========== */
 .qui-suis-je .container {
   max-width: 900px;
@@ -140,49 +247,353 @@ ul {
 }
 
 /* ========== Expériences (Ils m'ont fait confiance) ========== */
-.experience {
+.ils-mont-fait-confiance {
+  padding: 5rem 1rem;
+  background-color: white;
+   position: relative;
+}
+
+.ils-mont-fait-confiance h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #142A2E;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.experience-grid {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.experience {
+  background-color: #142A2E;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 330px;
+  flex: 1 1 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  color: white;
+}
+
+.experience:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .experience img {
-  width: 100px;
+  display: block;
+  width: clamp(100px, 15vw, 160px);;
   height: auto;
   object-fit: contain;
+  margin: 0 auto 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
-.experience > div {
-  flex: 1;
+.experience-img:hover {
+  transform: scale(1.05);
 }
 
 .experience h3 {
   margin-top: 0;
+  font-size: 1.15rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.experience ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  text-align: left;
+}
+
+.experience li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  color: white;
+  position: relative;
+}
+
+.experience li::before {
+  content: "•";
+  color: white;
+  position: absolute;
+  left: -1rem;
+  font-size: 1rem;
 }
 
 /* ========== Portfolio ========== */
-.portfolio .container {
+/* Couleurs générales */
+body {
+  background-color: #142A2E;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
 }
 
-.portfolio-grid {
+/* TITRES */
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.section-description {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.section-subtitle-left {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  text-align: left;
+  margin-bottom: 0.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.section-subsubtitle-left {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* CARDS - grille */
+
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
 }
 
-.portfolio-grid img {
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card individuelle */
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Image : taille responsive proportionnelle */
+
+.portfolio-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+   transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
 
-.portfolio-grid img:hover {
-  transform: scale(1.05);
+.portfolio-card img:hover {
+  transform: scale(1.1);
 }
+
+/* Textes de la card */
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: #8a8a8a; /* gris */
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-description {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  color: #ccc;
+  margin: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.card-note {
+  font-size: 0.8rem;
+  color: #ddd;
+  font-weight: 600;
+}
+
+/* Section portfolio */
+
+
+/* TITRES */
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.section-description {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.section-subtitle-left {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  text-align: left;
+  margin-bottom: 0.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.section-subsubtitle-left {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* CARDS - grille */
+
+.cards-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card individuelle */
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Image : taille responsive proportionnelle */
+
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+   transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.portfolio-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Textes de la card */
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  color: #8a8a8a; /* gris */
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-description {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  color: #ccc;
+  margin: 0;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.card-note {
+  font-size: 0.8rem;
+  color: #ddd;
+  font-weight: 600;
+}
+
+/* Section portfolio */
+
+.portfolio-section {
+  padding: 2rem 0;
+   position: relative;
+}
+
+
 
 /* ========== Logos logiciels ========== */
 .logos .container {
@@ -241,6 +652,25 @@ ul {
   display: block;
   width: 100%;
   height: 100px;
+}
+
+.wave-separator {
+  width: 100%;
+  height: 120px;
+  background: #142A2E;
+  position: relative;
+}
+
+.wave-separator::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: white; /* couleur de la section précédente */
+  border-radius: 100% 50%;
+  transform: scaleX(2);
 }
 
 /* ========== Utilitaires ========== */
