@@ -35,7 +35,25 @@ h2 {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
+
+h3 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+h4 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+h5 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
 p, li {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 0.8rem;
@@ -64,7 +82,7 @@ ul {
   padding: 3rem 1rem;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  font-size: clamp(2.5rem, 8vw, 5rem); 
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 700;
   margin: 0;
 }
@@ -96,27 +114,27 @@ ul {
   padding: 1rem;
 }
 
- /* BOUTON */
+/* BOUTON */
 
-  .scroll-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #142A2E;
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
-    margin: 2rem auto;
-    cursor: pointer;
-    line-height: 1.2;
-  }
+.scroll-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #142A2E;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+  margin: 2rem auto;
+  cursor: pointer;
+  line-height: 1.2;
+}
 
-  .scroll-link:hover {
-    color: #0a58ca;
-  }
-
+.scroll-link:hover {
+  color: #0a58ca;
+}
 
 /* ========== Texte animé (typed text) ========== */
+
 #typed-text {
   border-right: 2px solid #0A58CA;
   color: #0A58CA;
@@ -128,6 +146,41 @@ ul {
   display: inline-block;
   vertical-align: bottom;
 }
+
+/* Hero links : LinkedIn & Télécharger CV */
+
+.hero-links {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+  color: #142A2E;
+  padding: 0 1rem;
+}
+
+.hero-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-link:hover {
+  color: #0a58ca;
+}
+
+.hero-link svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
 
 /* ========== Ma situation ========== */
 .ma-situation .container {
@@ -240,33 +293,99 @@ ul {
 /* ========== Qui suis-je et parcours ========== */
 .qui-suis-je .container {
   max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.section-text {
-  margin-bottom: 2rem;
+/* Centrage du premier bloc */
+.qui-suis-je > .container > h2:first-of-type,
+.qui-suis-je > .container > .section-text:first-of-type {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Titre "Mon parcours scolaire" aligné à droite */
+.qui-suis-je > .container > h2:nth-of-type(2) {
+  text-align: right;
+  margin-top: 3rem;
+}
+
+/* Conteneur texte + image */
+.parcours-scolaire-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+/* Bloc contenant l'image pour s'adapter à la hauteur */
+.image-wrapper {
+  flex-shrink: 0;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Image adaptative en hauteur, non coupée */
+.parcours-image {
+  width: auto;
+  max-width: 50%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Texte justifié */
+.parcours-scolaire-wrapper .section-text {
+  flex: 1;
+  text-align: justify;
+}
+
+/* Mobile responsive : image passe au-dessus */
+@media (max-width: 768px) {
+  .parcours-scolaire-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qui-suis-je > .container > h2:nth-of-type(2) {
+    text-align: center;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .parcours-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 /* ========== Expériences (Ils m'ont fait confiance) ========== */
 .ils-mont-fait-confiance {
   padding: 5rem 1rem;
   background-color: white;
-   position: relative;
+  position: relative;
 }
 
 .ils-mont-fait-confiance h2 {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 2,2rem;
   color: #142A2E;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
 .experience-grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .experience {
@@ -277,12 +396,12 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 330px;
-  flex: 1 1 280px;
+  flex: 1 1 calc(33.333% - 2rem); /* 3 cards avec 2rem de gap */
+  min-width: 260px;
+  max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   color: white;
+  box-sizing: border-box;
 }
 
 .experience:hover {
@@ -292,7 +411,7 @@ ul {
 
 .experience img {
   display: block;
-  width: clamp(100px, 15vw, 160px);;
+  width: clamp(100px, 15vw, 160px);
   height: auto;
   object-fit: contain;
   margin: 0 auto 1rem;
@@ -335,6 +454,8 @@ ul {
   font-size: 1rem;
 }
 
+
+
 /* ========== Portfolio ========== */
 /* Couleurs générales */
 body {
@@ -351,124 +472,6 @@ body {
   padding: 1rem 1rem 3rem;
 }
 
-/* TITRES */
-
-.section-title {
-  font-size: clamp(2.5rem, 5vw, 3rem);
-  text-align: center;
-  margin-bottom: 0.25rem;
-  color: #fff;
-}
-
-.section-description {
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.section-subtitle-left {
-  font-size: clamp(1.5rem, 2vw, 1.8rem);
-  text-align: left;
-  margin-bottom: 0.1rem;
-  color: #fff;
-  font-weight: 600;
-}
-
-.section-subsubtitle-left {
-  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 2rem;
-  color: #fff;
-  font-weight: 400;
-}
-
-/* CARDS - grille */
-
-.cards-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: start;
-}
-
-@media (max-width: 900px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card individuelle */
-
-.portfolio-card {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-}
-
-/* Image : taille responsive proportionnelle */
-
-.portfolio-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-   transition: transform 0.3s ease;
-  cursor: zoom-in;
-}
-
-.portfolio-card img:hover {
-  transform: scale(1.1);
-}
-
-/* Textes de la card */
-
-.card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.card-title {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  margin: 0;
-  color: #fff;
-  font-weight: 700;
-}
-
-.card-subtitle {
-  font-size: clamp(0.8rem, 1vw, 1rem);
-  color: #8a8a8a; /* gris */
-  margin: 0;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.card-description {
-  font-size: clamp(0.85rem, 1vw, 1rem);
-  color: #ccc;
-  margin: 0;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.card-note {
-  font-size: 0.8rem;
-  color: #ddd;
-  font-weight: 600;
-}
-
-/* Section portfolio */
-
 
 /* TITRES */
 
@@ -541,8 +544,9 @@ body {
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 1rem;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
   cursor: zoom-in;
+  border: 5px solid #fff; /* ← ajout */
 }
 
 .portfolio-card img:hover {
@@ -555,6 +559,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  text-align: center; /* ← tous les textes de la card sont centrés */
 }
 
 .card-title {
@@ -565,46 +570,205 @@ body {
 }
 
 .card-subtitle {
-  font-size: clamp(0.8rem, 1vw, 1rem);
-  color: #8a8a8a; /* gris */
-  margin: 0;
-  font-weight: 400;
+  font-size: 0.8rem;
+  color: #ddd; /* ← même couleur que card-note */
+  font-weight: 600; /* ← même poids que card-note */
   font-style: normal;
+  margin: 0;
+  text-align: center; /* ← pour répondre au centrage */
 }
 
 .card-description {
-  font-size: clamp(0.85rem, 1vw, 1rem);
-  color: #ccc;
-  margin: 0;
-  font-weight: 300;
-  font-style: normal;
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    color: #ffffff;
+    margin: 0;
+    font-weight: 300;
+    font-style: normal;
+  text-align: center; /* ← pour répondre au centrage */
 }
 
-.card-note {
-  font-size: 0.8rem;
-  color: #ddd;
-  font-weight: 600;
-}
 
 /* Section portfolio */
 
-.portfolio-section {
-  padding: 2rem 0;
-   position: relative;
-}
+
+  /* Couleurs générales */
+  body {
+    background-color: #142A2E;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem;
+  }
+
+  /* TITRES */
+
+  .section-title {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 0.25rem;
+    color: #fff;
+  }
+
+  .section-description {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+
+  .section-subtitle-left {
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    text-align: left;
+    margin-bottom: 0.1rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .section-subsubtitle-left {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  /* CARDS - grille */
+
+  .cards-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Card individuelle */
+
+  .portfolio-card {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+
+  /* Image : taille responsive proportionnelle */
+
+  .portfolio-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .portfolio-card img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Image miniature */
+  .thumbnail {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+
+
+  /* Textes de la card */
+
+  .card-note {
+    font-size: 0.8rem;
+    color: #ddd;
+    font-weight: 600;
+  }
+
+  /* Section portfolio */
+
+  .portfolio-section {
+    padding: 2rem 0 0;
+  }
+
 
 
 
 /* ========== Logos logiciels ========== */
-.logos .container {
+.skills-section{
   max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
+/* TITRES */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #37474f;
+}
+
+/* LOGOS */
 .logo-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .logo-item {
@@ -629,7 +793,7 @@ body {
 
 .logo-caption {
   font-size: 14px;
-  color: #142a2e;
+  color: #142A2E;
   opacity: 0;
   transition: opacity 0.3s ease;
   height: 24px;
@@ -641,9 +805,120 @@ body {
   opacity: 1;
 }
 
+/* QUALIFICATIONS - BADGES */
+.qualifications-title {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Badges container */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+/* Badge style */
+.badge {
+  background-color: transparent;
+  color: #142A2E;
+  border: 1px solid #142A2E;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: default;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.badge:hover {
+  background-color: #142A2E;
+  color: white;
+}
+
+/* LANGUES - cercle de progression */
+
+.languages-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.language-circle {
+  --size: 120px;
+  --circle-bg: #white;
+  --progress-color: #142A2E;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--circle-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--progress-color);
+  font-weight: 700;
+  user-select: none;
+  margin-bottom: 1.5rem;
+}
+
+.language-circle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.language-circle circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.language-circle circle.bg {
+  stroke: var(--circle-bg);
+}
+
+.language-circle circle.progress {
+  stroke: var(--progress-color);
+  stroke-dasharray: 339.292; /* 2 * pi * 54 */
+  stroke-dashoffset: 339.292;
+  transition: stroke-dashoffset 1.5s ease;
+}
+
+.language-text {
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+.language-level {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  color: var(--progress-color);
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .language-circle {
+    --size: 100px;
+  }
+}
+
 /* ========== Séparateurs SVG ========== */
 .separator {
   width: 100%;
+  height: auto;
   overflow: hidden;
   line-height: 0;
 }
@@ -671,6 +946,101 @@ body {
   background: white; /* couleur de la section précédente */
   border-radius: 100% 50%;
   transform: scaleX(2);
+}
+
+.wave-separator1 {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-separator1 svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ========== Footer ========== */
+.footer {
+  background-color: #142A2E;
+  color: #fff;
+  padding: 1rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Left, center, right containers */
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-center {
+  flex-direction: column;
+  text-align: center;
+  flex: 1 1 300px; /* center takes available space */
+  gap: 0.25rem;
+}
+
+.footer-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.footer-location {
+  font-weight: 400;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-email {
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+/* Links styling */
+.footer-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* SVG icons */
+.icon {
+  width: 1em;   /* Same height as font size */
+  height: 1em;
+  fill: #fff;
+  flex-shrink: 0;
 }
 
 /* ========== Utilitaires ========== */
