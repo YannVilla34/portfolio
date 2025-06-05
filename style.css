@@ -152,7 +152,6 @@ ul {
 .hero-links {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
@@ -183,7 +182,7 @@ ul {
 
 
 /* ========== Ma situation ========== */
-.ma-situation .container {
+.container {
   max-width: 900px;
 }
 
@@ -251,6 +250,9 @@ ul {
 
 /* Responsive : adapte taille et décalage selon largeur écran */
 @media (max-width: 900px) {
+  #ma-situation {
+    overflow: hidden;
+  }
   .situation-wrapper {
     width: 80vw;
   }
@@ -258,6 +260,7 @@ ul {
   .situation-card {
     max-width: 70%;
     padding: 2rem 3rem;
+    min-width: 0px;
     transform: translate(-3%, -3%);
   }
   
