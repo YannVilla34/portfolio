@@ -513,7 +513,7 @@ body {
 
 .service-features {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes par défaut */
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(1.5rem, 3vw, 2rem);
 }
 
@@ -546,12 +546,16 @@ body {
   place-items: center;
   margin-bottom: 0.5rem;
   flex-shrink: 0;
+  overflow: hidden; /* Empêche le débordement */
+  position: relative; /* Pour contenir l'image */
 }
 
 .feature-img {
   width: clamp(32px, 5vw, 40px);
   height: clamp(32px, 5vw, 40px);
   object-fit: contain;
+  max-width: 100%; /* Ne dépasse jamais le parent */
+  max-height: 100%; /* Ne dépasse jamais le parent */
 }
 
 .feature-icon {
@@ -1124,7 +1128,8 @@ textarea {
   }
 }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 900px) { /* Abaissé de 1024px à 900px */
   .service-features {
     grid-template-columns: repeat(2, 1fr); /* 2×2 en tablet */
   }
@@ -1185,3 +1190,4 @@ textarea {
     grid-template-columns: 1fr; /* 1 colonne en mobile */
   }
 }
+
