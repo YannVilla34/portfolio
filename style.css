@@ -1265,3 +1265,31 @@ textarea {
   }
 }
 
+/* Corrige le header qui fait dépasser la page sur mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-container {
+    padding: 0.75rem 1rem;        /* padding réduit */
+    gap: 0.5rem;                  /* moins d'espace entre éléments */
+  }
+
+  /* On ne garde QUE le logo + burger en ligne */
+  .header-actions {
+    display: none;                /* masque complètement le groupe téléphone + bouton */
+  }
+
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;            /* pousse le burger à droite */
+  }
+
+  .nav {
+    left: 0;
+    right: 0;
+  }
+}
+
+
