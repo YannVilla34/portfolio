@@ -7,10 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
@@ -50,111 +48,99 @@
   </div>
 </header>
 
+<main>
+  <!-- HERO / ACCUEIL -->
+  <section id="accueil" class="hero">
+    <div class="hero-bg-carousel">
+      <div class="hero-bg-slide active"></div>
+      <div class="hero-bg-slide"></div>
+      <div class="hero-bg-slide"></div>
+      <div class="hero-bg-slide"></div>
+      <div class="hero-bg-slide"></div>
+    </div>
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-progress-container">
+      <div class="hero-progress-bar"></div>
+    </div>
+    
+    <button class="hero-carousel-btn hero-carousel-prev" aria-label="Image précédente">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <button class="hero-carousel-btn hero-carousel-next" aria-label="Image suivante">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+    
+    <div class="hero-content">
+      <div class="hero-branding">
+        <h1 class="hero-title">Stephan Taurines</h1>
+        <p class="hero-subtitle-tag">Construction et Rénovation</p>
+      </div>
+      
+      <p class="hero-subtitle">
+        Votre piscine prête à nager en quelques jours, à partir de 13 800€
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
+        <a href="#realisations" class="btn-secondary">Voir nos réalisations</a>
+      </div>
+    </div>
+  </section>
 
-  <main>
-    <!-- HERO / ACCUEIL -->
-<section id="accueil" class="hero">
-  <!-- Carrousel de fond -->
-  <div class="hero-bg-carousel">
-    <div class="hero-bg-slide active"></div>
-    <div class="hero-bg-slide"></div>
-    <div class="hero-bg-slide"></div>
-    <div class="hero-bg-slide"></div>
-    <div class="hero-bg-slide"></div>
-  </div>
-  
-  <!-- Overlay sombre -->
-  <div class="hero-overlay"></div>
-  
-  <!-- Barre de progression discrète en haut -->
-  <div class="hero-progress-container">
-    <div class="hero-progress-bar"></div>
-  </div>
-  
-  <!-- Boutons de navigation du carrousel hero -->
-  <button class="hero-carousel-btn hero-carousel-prev" aria-label="Image précédente">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M15 18l-6-6 6-6"/>
-    </svg>
-  </button>
-  <button class="hero-carousel-btn hero-carousel-next" aria-label="Image suivante">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M9 18l6-6-6-6"/>
-    </svg>
-  </button>
-  
-  <!-- Contenu hero -->
-  <div class="hero-content">
-    <!-- Contenu hero -->
-<div class="hero-content">
-  <div class="hero-branding">
-    <h1 class="hero-title">Stephan Taurines</h1>
-    <p class="hero-subtitle-tag">Construction et Rénovation</p>
-  </div>
-  
-  <p class="hero-subtitle">
-    Votre piscine prête à nager en quelques jours, à partir de 13 800€
-  </p>
-  
-  <div class="hero-buttons">
-    <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
-    <a href="#realisations" class="btn-secondary">Voir nos réalisations</a>
-  </div>
-</div>
+  <!-- NOS SERVICES -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <h2 class="section-title">Nos Services</h2>
+      <p class="section-intro">
+        Spécialiste de la piscine coque polyester, nous vous proposons des solutions clés en main avec filtration intégrée, isolation renforcée et accessoires complets.
+      </p>
 
-
-</section>
-
-
-    <!-- NOS SERVICES -->
-    <section id="services" class="section services-section">
-      <div class="container">
-        <h2 class="section-title">Nos Services</h2>
-        <p class="section-intro">
-          Spécialiste de la piscine coque polyester, nous vous proposons des solutions clés en main avec filtration intégrée, isolation renforcée et accessoires complets.
-        </p>
-
-        <div class="service-cards-wrapper">
-          <div class="service-features">
-            <div class="feature-card">
-              <div class="feature-logo">
-                <span class="feature-icon">⚙️</span>
-              </div>
-              <h4>Filtration montée en usine</h4>
-              <ul class="feature-list">
-                <li>Système de filtration installé directement sur la coque pour une fiabilité optimale</li>
-              </ul>
+      <div class="service-cards-wrapper">
+        <div class="service-features">
+          <div class="feature-card">
+            <div class="feature-logo">
+              <span class="feature-icon">⚙️</span>
             </div>
-            
-            <div class="feature-card">
-              <div class="feature-logo">
-                <span class="feature-icon">🛡️</span>
-              </div>
-              <h4>Isolation polyuréthane</h4>
-              <ul class="feature-list">
-                <li>Mousse polyuréthane projetée à l'extérieur garantissant une excellente isolation thermique</li>
-              </ul>
+            <h4>Filtration montée en usine</h4>
+            <ul class="feature-list">
+              <li>Système de filtration installé directement sur la coque pour une fiabilité optimale</li>
+            </ul>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-logo">
+              <span class="feature-icon">🛡️</span>
             </div>
-            
-            <div class="feature-card">
-              <div class="feature-logo">
-                <span class="feature-icon">✅</span>
-              </div>
-              <h4>Accessoires inclus</h4>
-              <ul class="feature-list">
-                <li>Skimmer, buses de refoulement, projecteur LED, bonde de fond et caisson de filtration</li>
-              </ul>
+            <h4>Isolation polyuréthane</h4>
+            <ul class="feature-list">
+              <li>Mousse polyuréthane projetée à l'extérieur garantissant une excellente isolation thermique</li>
+            </ul>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-logo">
+              <span class="feature-icon">✅</span>
             </div>
-            
-            <div class="feature-card">
-              <div class="feature-logo">
-                <span class="feature-icon">🚜</span>
-              </div>
-              <h4>Terrassement & mise en place</h4>
-              <ul class="feature-list">
-                <li>Nous gérons l'intégralité du terrassement et de l'installation de votre piscine</li>
-              </ul>
+            <h4>Accessoires inclus</h4>
+            <ul class="feature-list">
+              <li>Skimmer, buses de refoulement, projecteur LED, bonde de fond et caisson de filtration</li>
+            </ul>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-logo">
+              <img src="photos/logo/tracto.svg" alt="Terrassement & mise en place" class="feature-img">
             </div>
+            <h4>Terrassement & mise en place</h4>
+            <ul class="feature-list">
+              <li>Nous gérons l'intégralité du terrassement et de l'installation de votre piscine</li>
+            </ul>
           </div>
         </div>
 
@@ -204,219 +190,202 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- NOS RÉALISATIONS -->
-    <section id="realisations" class="section realisations-section">
-      <div class="container">
-        <h2 class="section-title">Nos Réalisations</h2>
-        <p class="section-intro">
-          Découvrez quelques-unes de nos installations récentes
-        </p>
-        
-        <!-- Grid de réalisations -->
-        <div class="realisations-grid">
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-          <div class="realisation-item"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AVANTAGES / CHIFFRES CLÉS -->
-<section id="avantages" class="section stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
-        </div>
-        <div class="stat-number">X+</div>
-        <div class="stat-label">Années d'expérience</div>
-      </div>
-      
-      <div class="stat-item">
-        <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-          </svg>
-        </div>
-        <div class="stat-number">X+</div>
-        <div class="stat-label">Clients satisfaits</div>
-      </div>
-      
-      <div class="stat-item">
-  <div class="stat-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-</svg>
-  </div>
-  <div class="stat-number">X+</div>
-  <div class="stat-label">Piscines construites</div>
-</div>
-
-      
-      <div class="stat-item">
-  <div class="stat-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-      <path d="M9 12l2 2 4-4"></path>
-    </svg>
-  </div>
-  <div class="stat-number">10 ans</div>
-  <div class="stat-label">Garantie décennale</div>
-</div>
-  </div>
-</section>
-
-
-<!-- AVIS CLIENTS / GOOGLE REVIEWS -->
-<section id="avis" class="section avis-section">
-  <div class="container">
-    <h2 class="section-title">Ce que nos clients disent de nous</h2>
-    <p class="section-intro">
-      Avis Google vérifiés mis à jour automatiquement
-    </p>
-    
-    <!-- Widget SociableKIT - Avis Google en temps réel -->
-    <div class="sk-ww-google-reviews" data-embed-id="25633772"></div>
-    <script src="https://widgets.sociablekit.com/google-reviews/widget.js" async defer></script>
-  </div>
-</section>
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <div class="contact-wrapper">
-          <!-- Colonne gauche : Coordonnées et Horaires -->
-          <div class="contact-info-column">
-            <div class="contact-info-card">
-              <h2>Coordonnées</h2>
-              
-              <div class="info-block">
-                <div class="info-icon">📞</div>
-                <div class="info-content">
-                  <div class="info-label">Téléphone</div>
-                  <div class="info-value">06 74 29 05 15</div>
-                </div>
-              </div>
-
-              <div class="info-block">
-                <div class="info-icon">✉️</div>
-                <div class="info-content">
-                  <div class="info-label">Email</div>
-                  <div class="info-value">taurines.stephan@wanadoo.fr</div>
-                </div>
-              </div>
-
-              <div class="info-block">
-                <div class="info-icon">📍</div>
-                <div class="info-content">
-                  <div class="info-label">Adresse</div>
-                  <div class="info-value">236 Chemin du Gouletier<br>34270 Saint-Mathieu-de-Tréviers</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="opening-hours-card">
-              <h3>Horaires d'ouverture</h3>
-              <div class="hours-row">
-                <span>Lundi - Vendredi</span>
-                <span>xh00 - xxh00</span>
-              </div>
-              <div class="hours-row">
-                <span>Samedi</span>
-                <span>xxh00 - h00</span>
-              </div>
-              <div class="hours-row">
-                <span>Dimanche</span>
-                <span>Fermé</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonne droite : Formulaire -->
-          <div class="contact-form-wrapper">
-            <h2>Demande de devis</h2>
-            <form class="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Nom complet *</label>
-                  <input type="text" id="name" placeholder="Jean Dupont" required>
-                </div>
-                <div class="form-group">
-                  <label for="phone">Téléphone *</label>
-                  <input type="tel" id="phone" placeholder="06 12 34 56 78" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" placeholder="jean@example.fr" required>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Décrivez votre projet *</label>
-                <textarea id="message" rows="5" placeholder="Type de piscine souhaitée, dimensions approximatives, terrain..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary btn-submit">
-                Envoyer ma demande ✈️
-              </button>
-              <p class="form-status" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Stephan Taurines – Tous droits réservés.</p>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- NOS RÉALISATIONS -->
+  <section id="realisations" class="section realisations-section">
+    <div class="container">
+      <h2 class="section-title">Nos Réalisations</h2>
+      <p class="section-intro">
+        Découvrez quelques-unes de nos installations récentes
+      </p>
+      
+      <div class="realisations-grid">
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+        <div class="realisation-item"></div>
+      </div>
+    </div>
+  </section>
 
- <!-- LIGHTBOX POUR IMAGES EN PLEIN ÉCRAN -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" aria-label="Fermer">&times;</button>
-    <button class="lightbox-prev" aria-label="Image précédente">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M15 18l-6-6 6-6"/>
-      </svg>
-    </button>
-    <button class="lightbox-next" aria-label="Image suivante">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M9 18l6-6-6-6"/>
-      </svg>
-    </button>
-    <img src="" alt="" class="lightbox-img" id="lightbox-img">
-    <div class="lightbox-counter" id="lightbox-counter"></div>
+  <!-- AVANTAGES / CHIFFRES CLÉS -->
+  <section id="avantages" class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="stat-number">15</div>
+          <div class="stat-label">Années d'expérience</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-number">X+</div>
+          <div class="stat-label">Clients satisfaits</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <div class="stat-number">10 ans</div>
+          <div class="stat-label">Garantie décennale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS CLIENTS / GOOGLE REVIEWS -->
+  <section id="avis" class="section avis-section">
+    <div class="container">
+      <h2 class="section-title">Ce que nos clients disent de nous</h2>
+      <p class="section-intro">
+        Avis Google vérifiés mis à jour automatiquement
+      </p>
+      
+      <div class="sk-ww-google-reviews" data-embed-id="25633772"></div>
+      <script src="https://widgets.sociablekit.com/google-reviews/widget.js" async defer></script>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info-column">
+          <div class="contact-info-card">
+            <h2>Coordonnées</h2>
+            
+            <div class="info-block">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <div class="info-label">Téléphone</div>
+                <div class="info-value">06 74 29 05 15</div>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div class="info-icon">✉️</div>
+              <div class="info-content">
+                <div class="info-label">Email</div>
+                <div class="info-value">taurines.stephan@wanadoo.fr</div>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <div class="info-label">Adresse</div>
+                <div class="info-value">236 Chemin du Gouletier<br>34270 Saint-Mathieu-de-Tréviers</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="opening-hours-card">
+            <h3>Horaires d'ouverture</h3>
+            <div class="hours-row">
+              <span>Lundi - Vendredi</span>
+              <span>xh00 - xxh00</span>
+            </div>
+            <div class="hours-row">
+              <span>Samedi</span>
+              <span>xxh00 - h00</span>
+            </div>
+            <div class="hours-row">
+              <span>Dimanche</span>
+              <span>Fermé</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h2>Demande de devis</h2>
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nom complet *</label>
+                <input type="text" id="name" placeholder="Jean Dupont" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Téléphone *</label>
+                <input type="tel" id="phone" placeholder="06 12 34 56 78" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" placeholder="jean@example.fr" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Décrivez votre projet *</label>
+              <textarea id="message" rows="5" placeholder="Type de piscine souhaitée, dimensions approximatives, terrain..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">
+              Envoyer ma demande ✈️
+            </button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Stephan Taurines – Tous droits réservés.</p>
   </div>
+</footer>
 
-  <script src="script.js"></script>
+<!-- LIGHTBOX POUR IMAGES EN PLEIN ÉCRAN -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Fermer">&times;</button>
+  <button class="lightbox-prev" aria-label="Image précédente">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </button>
+  <button class="lightbox-next" aria-label="Image suivante">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M9 18l6-6-6-6"/>
+    </svg>
+  </button>
+  <img src="" alt="" class="lightbox-img" id="lightbox-img">
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
