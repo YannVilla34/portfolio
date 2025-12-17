@@ -462,7 +462,7 @@ body {
   left: 0;
   width: 100%;
   height: clamp(30px, 5vw, 60px);
-  background: #f8fafc;
+  background: #ffffff;
   clip-path: polygon(
     0% 30%, 5% 25%, 10% 20%, 15% 25%, 20% 35%, 25% 40%,
     30% 35%, 35% 30%, 40% 25%, 45% 30%, 50% 40%, 55% 35%,
@@ -1291,5 +1291,6 @@ textarea {
     right: 0;
   }
 }
+
 
 
