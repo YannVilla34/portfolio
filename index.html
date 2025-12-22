@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Yann Villa</title>
+  <meta name="description" content="Étudiant en première année de Master Communication Numérique des Organisations à Montpellier, je recherche une alternance pour l'année à venir.">
+  <meta name="robots" content="index, follow">
+  <meta keywords="portfolio, communication, marketing, Montpellier, Yann Villa, Yann, Villa, Community Manager, Chargé de communication, relation presse, relations presse,marketing digital, branding, content marketing, stratégie, CRM, veille stratégique, analyse des performances, SEO">
+
+  <!-- Police Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SECTION 1 : HERO (blanc) -->
+<section class="hero light-bg full-screen-hero">
+  <h1 style="text-align: center;">Yann Villa</h1>
+  <p class="subtitle" style="text-align: center;">Étudiant en master Information-Communication</p>
+
+  <!-- Texte animé -->
+  <div class="text-center mt-5" style="font-family: 'Poppins', sans-serif;">
+    <h2 class="fw-bold" style="font-size: clamp(1.5rem, 5vw, 2.8rem); line-height: 1.4;">
+      <span style="display: inline;">Je suis </span><br class="d-sm-none">
+      <span id="typed-text" style="border-right: 2px solid #0A58CA; color: #0A58CA; font-weight: bold;"></span>
+    </h2>
+  </div>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const texts = [
+        "chargé de communication",
+        "rédacteur",
+        "chargé de communication interne",
+        "chargé de projet événementiel",
+        "chargé des relations presse",
+        "chargé de projet en communication numérique",
+        "community manager"
+      ];
+
+      const typingSpeed = 80;
+      const erasingSpeed = 50;
+      const delayBetweenTexts = 1200;
+
+      let textIndex = 0;
+      let charIndex = 0;
+      const typedTextElement = document.getElementById("typed-text");
+
+      function type() {
+        if (!typedTextElement) return;
+        if (charIndex < texts[textIndex].length) {
+          typedTextElement.textContent = texts[textIndex].substring(0, charIndex + 1);
+          charIndex++;
+          setTimeout(type, typingSpeed);
+        } else {
+          setTimeout(erase, delayBetweenTexts);
+        }
+      }
+
+      function erase() {
+        if (!typedTextElement) return;
+        if (charIndex > 0) {
+          typedTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(erase, erasingSpeed);
+        } else {
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(type, 500);
+        }
+      }
+
+      setTimeout(type, 1000);
+    });
+  </script>
+
+  <!-- Bouton "En savoir plus" -->
+  <a href="#ma-situation" id="scrollLink" class="scroll-link">
+    <span>En savoir plus</span>
+    <span>v</span>
+  </a>
+
+  <!-- Liens LinkedIn et Télécharger CV -->
+  <div class="hero-links">
+    <a href="https://www.linkedin.com/in/yann-villa" target="_blank" rel="noopener noreferrer" class="hero-link">
+      <svg class="icon-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v13h-4V8zm7 0h3.75v1.8h.05c.52-.99 1.8-2.04 3.7-2.04 3.96 0 4.7 2.6 4.7 5.98V21h-4v-6.25c0-1.5-.03-3.43-2.09-3.43-2.1 0-2.42 1.64-2.42 3.33V21h-4V8z"/>
+      </svg>
+      Profil Linkedin
+    </a>
+    <a href="img/Exp/CV - Villa Yann.pdf" target="_blank" rel="noopener noreferrer" class="hero-link">
+      <svg class="icon-pdf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM15 3.5V9h5M9 14h2v5H9zm4 0h2v5h-2z"/>
+      </svg>
+      Télécharger CV
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- SECTION 1bis : MA SITUATION -->
+  <section id="ma-situation" class="situation-section">
+  <div class="situation-wrapper">
+    <div class="situation-card">
+      <h2>Ma situation</h2>
+      <h4>Admis en première année de Master Information-Communication à Montpellier et à Aix-En-Provence, je recherche une alternance dès la rentrée universitaire 2025.</h4>
+      <p class="fonddark">
+        Actuellement accepté à Montpellier en master Information-Communication spécialisation Communication Numérique des Organisations, ainsi qu’à Aix-En-Provence dans le master Information-Communication spécialisation Stratégies de communication et relations presse, je recherche une entreprise basée dans une de ces deux villes.
+      </p>
+    </div>
+    <img src="img/illustration/A.png" alt="Illustration" class="situation-bg-img" />
+  </div>
+</section>
+
+ <!-- Séparateur entre situation (blanc) et qui suis-je -->
+  <div class="separator">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+
+
+
+  <!-- SECTION 2 : QUI SUIS-JE ET PARCOURS SCOLAIRE (fond sombre) -->
+ <section class="qui-suis-je parcours dark-bg">
+  <div class="container">
+    <h2>Qui suis-je ?</h2>
+    <div class="section-text">
+      <p class="fonddark">Je m'appelle Yann, j'ai 21 ans et j'ai découvert une passion débordante pour les métiers de la communication lors de mon adolescence. Amoureux de la communication numérique et du social media management, mais aussi un amateur d'événementiel, j'ai rejoint plusieurs associations pour travailler ces aspects qui m'intéressent tant. Dans mes expériences associatives, je passe mon temps à réaliser toute la communication stratégique et graphique autour des événements produits.</p>
+    </div>
+
+    <h2>Mon parcours scolaire</h2>
+    <div class="parcours-scolaire-wrapper">
+      <img src="img/illustration/cours.png" alt="Parcours scolaire" class="parcours-image" />
+      <div class="section-text">
+        <p class="fonddark">Après l’obtention de mon Baccalauréat général options HGGSP, HLP et SES, j’ai choisi de me tourner vers le domaine qui m’attirait depuis des années, celui de la Communication, et ce dans l’Université de ma ville de naissance : Montpellier.</p>
+        <p class="fonddark">Ce choix était le bon puisqu’il m’a permis d’acquérir des compétences diverses dans la communication 360°, me permettant d’être à l’aise dans la création de visuels, tout comme dans la mise en place de stratégies de diffusions efficaces et en étant capable de m’occuper de la communication interne d’une entreprise. Mes deux stages dans une société dans l’événementiel à succès m’ont aussi permis de les travailler et de les compléter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Séparateur entre PARCOURS SCOLAIRE et  ILS M'ONT FAIT CONFIANCE  -->
+ <div class="separator separator-bottom">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" width="100%" height="100px">
+    <path d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z" fill="#ffffff"></path>
+  </svg>
+</div>
+
+
+  <!-- SECTION 3 : ILS M'ONT FAIT CONFIANCE (fond blanc) -->
+  <section class="ils-mont-fait-confiance light-bg">
+  <div class="container">
+    <h2>Ils m'ont fait confiance</h2>
+
+    <div class="experience-grid">
+
+      <div class="experience">
+        <a href="https://www.instagram.com/adem.montpellier/" target="_blank">
+        <img src="img/logo/ADEM3 Color.png" alt="Vice-Président Communication" class="experience-logo" />
+        </a>
+        <div>
+          <h3>Vice-Président Communication</h3>
+          <ul>
+            <li>Communication print et numérique sur l’intégralité des événements</li>
+            <li>Organisation d’événements festifs étudiants</li>
+            <li>Organisation d’événements solidaires (distribution de petits-déjeuners, marché gratuit…)</li>
+            <li>Gestion d’équipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience">
+        <a href="https://legrandbarathon.com" target="_blank">
+        <img src="img/logo/Barathon.webp" alt="Chargé de Communication" class="experience-logo" />
+        </a>
+        <div>
+          <h3>Chargé de Communication</h3>
+          <ul>
+            <li>Organisation d'un événement "Le Grand Barathon" avec +60 000 clients par an à travers la France (Lyon, Montpellier, Toulouse, Grenoble, Lille…)</li>
+            <li>Stratégie globale des différents événements de l'entreprise</li>
+            <li>Rédaction pour les réseaux sociaux et campagne de mailing</li>
+            <li>Développement d’une stratégie de communication d’influence, de la recherche des profils à la coordination des campagnes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience">
+        <a href="https://www.facebook.com/mhsconair/" target="_blank">
+         <img src="img/logo/MHSCOnAir.webp" alt="Rédacteur" class="experience-logo" />
+        </a>
+        <div>
+          <h3>Rédacteur</h3>
+          <ul>
+            <li>Rédaction d'articles et de brèves liés au Montpellier Hérault Sport Club</li>
+            <li>Transcription d'interviews</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Séparateur entre ILS M'ONT FAIT CONFIANCE et PORTFOLIO -->
+
+  <!-- SECTION 4 : PORTFOLIO (fond sombre) -->
+ 
+    <section class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-description">Une partie de mes travaux utilisés par les organisations</p>
+      <h2 class="section-subtitle-left">Événementiel</h2>
+      <h3 class="section-subsubtitle-left">Graphisme et organisation d'événements</h3>
+
+      <div class="cards-grid">
+        <div class="portfolio-card">
+          <img src="img/Exp/Soirée Post insta.png" alt="Anti Valentine's Day" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Anti Valentine's Day</h4>
+            <p class="card-subtitle">ADEM3</p>
+            <p class="card-description">
+              J'ai réalisé l'ensemble de la campagne de communication print et numérique, utilisée par plusieurs autres associations et directement par le club sur ses réseaux sociaux.
+              <br><span class="card-note">(+1000 étudiants)</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="img/Exp/SUMMER.png" alt="Spring Break Party" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Spring Break Party</h4>
+            <p class="card-subtitle">ADEM3</p>
+            <p class="card-description">
+              J'ai participé activement à l'organisation de l'événement en plus d'avoir réalisé l'ensemble de la campagne de communication print et numérique, utilisée par plusieurs autres associations.
+              <br><span class="card-note">(+300 étudiants)</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="img/Exp/publication insta  (1).png" alt="Gala 2025" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Gala de l'Université Paul Valéry 2025</h4>
+            <p class="card-subtitle">ADEM3</p>
+            <p class="card-description">
+              J'ai réalisé la quasi totalité des éléments de communication du Gala. J'ai aussi participé très activement à l'organisation de l'événement le plus ambitieux organisé à l'Université depuis des années.
+              <br><span class="card-note">(+500 étudiants)</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="img/Exp/barathon post.jpg" alt="Barathon" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Le Grand Barathon édition Feria</h4>
+            <p class="card-subtitle">Le Grand Barathon (société HYPES)</p>
+            <p class="card-description">
+              J'ai participé à l'organisation, à certains contenus sur les réseaux sociaux et surtout à la mise en place et la réalisation d'une campagne de communication via des influenceurs pour l'édition toulousaine.
+              <br><span class="card-note">(+60'000 clients)</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <div class="container">
+      <h2 class="section-subtitle-left">Rédaction</h2>
+      <h3 class="section-subsubtitle-left">Mailing et articles</h3>
+
+      <div class="cards-grid">
+        <div class="portfolio-card">
+          <img src="img/Exp/image.png" alt="Mail Vente Privée" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Mail Vente Privée</h4>
+            <p class="card-subtitle">Le Grand Barathon (société HYPES)</p>
+            <p class="card-description">
+              J'ai rédigé la quasi totalité de la campagne de mailing de l'édition Feria de toutes les villes où Le Grand Barathon est présent, ainsi que pour l'édition précédente (Dessins Animés)
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="img/Exp/image (1).png" alt="Mail Sold Out imminent" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Mail Sold Out imminent</h4>
+            <p class="card-subtitle">Le Grand Barathon (société HYPES)</p>
+            <p class="card-description">
+              J'ai rédigé la quasi totalité de la campagne de mailing de l'édition Feria de toutes les villes où Le Grand Barathon est présent, ainsi que pour l'édition précédente (Dessins Animés)
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="img/Exp/image (2).png" alt="Article sur les blessés du MHSC" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Article sur les blessés du MHSC</h4>
+            <p class="card-subtitle">MHSC On Air</p>
+            <p class="card-description">
+              Durant une année complète, j'ai écris au rythme de plus d'un par semaines, divers articles sur l'actualité du club pour ce média de supporters.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="img/Exp/image (3).png" alt="Transcription interview Joris Chotard" class="thumbnail" onclick="openLightbox(this.src)" />
+          <div class="card-text">
+            <h4 class="card-title">Transcription d'une interview de Joris Chotard</h4>
+            <p class="card-subtitle">MHSC On Air</p>
+            <p class="card-description">
+              À chaque fin de rencontre sportive, ma mission était de retranscrire entre une et deux interviews que les joueurs du club ont pu accorder en conférence de presse à divers médias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overlay Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Image agrandie" class="lightbox-img" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const img = lightbox.querySelector('img');
+      img.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+  <!-- Séparateur entre PORTFOLIO et MES LOGICIELS -->
+  
+<div class="separator separator-top">
+  <svg viewBox="0 0 1440 300" preserveAspectRatio="none" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1440" height="300" fill="white" />
+    <!-- Arc plus doux -->
+    <path d="M0,300 Q720,100 1440,300 L1440,0 L0,0 Z" fill="#142A2E"></path>
+  </svg>
+</div>
+
+
+
+
+  <!-- SECTION 5 : MES LOGICIELS ( blanc) -->
+  <section class="light-bg">
+  <div class="container">
+
+    <h2 class="section-title" style="color: #142A2E" >Mes compétences</h2>
+    <h3 class="section-subtitle">Mes qualifications</h3>
+
+    <div class="badges-container">
+      <span class="badge">Communication interpersonnelle</span>
+      <span class="badge">Communication visuelle</span>
+      <span class="badge">Communication stratégique</span>
+      <span class="badge">Marketing sur les RSN</span>
+      <span class="badge">Marketing par des influenceurs</span>
+      <span class="badge">Email Marketing</span>
+      <span class="badge">Planification stratégique</span>
+      <span class="badge">Communication institutionnelle</span>
+      <span class="badge">Branding</span>
+      <span class="badge">Content Marketing</span>
+      <span class="badge">CRM</span>
+      <span class="badge">Veille Stratégique</span>
+      <span class="badge">Analyse des performances</span>
+      <span class="badge">Autonomie</span>
+      <span class="badge">Permis B</span>
+      <span class="badge">Influenceurs</span>
+      <span class="badge">Retouche photo</span>
+      <span class="badge">Graphisme</span>
+      <span class="badge">Infographie</span>
+      <span class="badge">Événementiel</span>
+    </div>
+
+    <div class="languages-container">
+      <div class="language-circle" data-progress="100">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="54" />
+          <circle class="progress" cx="60" cy="60" r="54" />
+        </svg>
+        <div class="language-text">Français</div>
+        <div class="language-level">Natif</div>
+      </div>
+      <div class="language-circle" data-progress="60">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="54" />
+          <circle class="progress" cx="60" cy="60" r="54" />
+        </svg>
+        <div class="language-text">Anglais</div>
+        <div class="language-level">B2</div>
+      </div>
+      <div class="language-circle" data-progress="40">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="54" />
+          <circle class="progress" cx="60" cy="60" r="54" />
+        </svg>
+        <div class="language-text">Espagnol</div>
+        <div class="language-level">B1</div>
+      </div>
+    </div>
+
+    
+    <h3 class="section-subtitle">Mes logiciels</h3>
+
+    <div class="logo-grid">
+      <div class="logo-item">
+        <img src="img/Logiciels/Ps.png" alt="Photoshop" loading="lazy">
+        <div class="logo-caption">Photoshop</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Id.png" alt="InDesign" loading="lazy">
+        <div class="logo-caption">InDesign</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Ai.png" alt="Illustrator" loading="lazy">
+        <div class="logo-caption">Illustrator</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Mailchimp.png" alt="Mailchimp" loading="lazy">
+        <div class="logo-caption">Mailchimp</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Figma.png" alt="Figma" loading="lazy">
+        <div class="logo-caption">Figma</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Aff.png" alt="Suite Affinity" loading="lazy">
+        <div class="logo-caption">Suite Affinity</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Canva.png" alt="Canva" loading="lazy">
+        <div class="logo-caption">Canva</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Capcut.png" alt="CapCut" loading="lazy">
+        <div class="logo-caption">CapCut</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Office.png" alt="Suite Office" loading="lazy">
+        <div class="logo-caption">Suite Office</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Pr.png" alt="Premiere Pro" loading="lazy">
+        <div class="logo-caption">Premiere Pro</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Trello.png" alt="Trello" loading="lazy">
+        <div class="logo-caption">Trello</div>
+      </div>
+      <div class="logo-item">
+        <img src="img/Logiciels/Wordp.png" alt="WordPress" loading="lazy">
+        <div class="logo-caption">WordPress</div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.language-circle').forEach(circle => {
+    const progressCircle = circle.querySelector('circle.progress');
+    const radius = progressCircle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+    const progressPercent = circle.getAttribute('data-progress');
+
+    progressCircle.style.strokeDasharray = circumference;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    const offset = circumference - (progressPercent / 100) * circumference;
+    setTimeout(() => {
+      progressCircle.style.strokeDashoffset = offset;
+    }, 100);
+  });
+</script>
+
+    <!-- Séparateur SVG -->
+  
+
+  <!-- SECTION 6 : footer (fond sombre) -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-left">
+      <a href="https://www.linkedin.com/in/yann-villa" target="_blank" rel="noopener" class="footer-link">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.037-1.852-3.037-1.854 0-2.136 1.445-2.136 2.939v5.667H9.355V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.266 2.37 4.266 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.922 20.452H3.753V9h3.17v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.724v20.549C0 23.23.792 24 1.771 24h20.451C23.2 24 24 23.23 24 22.273V1.724C24 .771 23.2 0 22.225 0z"/>
+        </svg>
+        Profil Linkedin
+      </a>
+    </div>
+
+    <div class="footer-center">
+      <div class="footer-name">Villa Yann</div>
+      <div class="footer-location">Montpellier &amp; Aix-En-Provence</div>
+    <a href="mailto:contact@yann-villa.fr" class="footer-link footer-email" target="_blank" rel="noopener noreferrer">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.511l-8 5.011-8-5.011V6h16zM4 18v-9.148l7.607 4.756a1 1 0 0 0 1.086 0L20 8.852V18H4z"/>
+       </svg>
+       contact@yann-villa.fr
+    </a>
+
+    </div>
+
+    <a href="img/Exp/CV - Villa Yann (2).pdf" download class="footer-link" target="_blank" rel="noopener noreferrer">
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h4.5L13 3.5zM11 14H9v-2H7v-2h2v-2h2v2h2v2h-2v2z"/>
+  </svg>
+  Télécharger CV
+</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+  document.getElementById('scrollLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('ma-situation').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
+
+</body>
+</html>
+
